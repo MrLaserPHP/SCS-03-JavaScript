@@ -1,4 +1,24 @@
 
+// alert trial
+// alert( "Alphabet letter #4 is " + alphabetlow[4-1]);
+
+// after or in the button area, run folloiwng line of code to prevent unwanted...
+// event.preventDefault();
+
+// STEPS *************** STEPS
+// first need to start a loop limitied to the length of the number of characters desired for password, perhaps 24?
+// for first character, need to use option var to decide which of the 3 types of characters to use. Otherwise need to concatinate all characters and choose randomly from thos?
+// then need to add a ++ to the loop
+// also need to re-randomise the option number variable.
+
+
+// function clearentry() {
+//   var x = document.getElementById("demo"); 
+// }
+
+
+
+
 // SYNTAX EXAMPLES ************************* SYNTAX EXAMPLES
 // 
 // var userName = prompt("What's your name?");

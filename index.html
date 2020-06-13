@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Password Generator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css"
 </head>
 
@@ -16,34 +15,49 @@
   </header>
   
   <h2>Let's Generate a Password</h2>
-  <div>
-    <h2>Date/Time generator for fun</h2>
-    <button type="button" class="btn btn-info"
-      onclick="document.getElementById('demo').innerHTML = Date()">
-      Click me to display Date and Time.</button>
-    <p id="demo"></p>
-  </div>
 
   <br>
 
-  <div>
-    <textarea
-      readonly
-      id="password"
-      placeholder="Your Secure Password"
-      aria-label="Generated Password"
-    >
-    "some text"
-    </textarea>
+  <div class="container">
+    <form class="form">
+      <div>
+        <textarea class="passwordDisplay"
+        readonly
+        id="password"
+        placeholder="Your Secure Password"
+        aria-label="Generated Password"
+        >
+        "Your generated password will show up here"
+        </textarea>
 
-    <button id="generate" class="btn btn-info">Generate Password</button>
-    <button id="copy" class="btn btn-info">Copy to Clipboard</button>
-    <button id="clearentry" class="btn btn-info">Clear this entry</button>
+        <button id="generate" class="btn btn-info">Generate Password</button>
+        <button id="copy" class="btn btn-info">Copy to Clipboard</button>
+        <button id="clearentry" class="btn btn-info">Clear this entry</button>
+
+      </div>
+
+      
+    </form>
   </div>
 
   <script
     src="script.js">
   </script>
+
+  <script
+    src="script-references.js">
+  </script>
 </body>
 
 </html>
+
+
+
+<!-- 
+<div>
+  <h2>Date/Time generator for fun</h2>
+  <button type="button" class="btn btn-info"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+  <p id="demo"></p>
+</div> -->
