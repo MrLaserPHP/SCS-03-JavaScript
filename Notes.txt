@@ -1,0 +1,2 @@
+Use an Event delegation?
+https://javascript.info/event-delegation#:~:text=Event%20delegation,handler%20on%20their%20common%20ancestor.

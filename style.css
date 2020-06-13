@@ -1,0 +1,17 @@
+body {
+    background-color: turquoise;
+    background-image: url(https://codingmetrology.com/wp-content/uploads/2019/03/2017-08-25-CropShrink.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+h1 {
+    background-color: lightgray;
+    color: darkslategray;
+    font-size: 30px;
+}
+
+h2 {
+    color: darkslategray;
+    font-size: 20px;
+}
+
