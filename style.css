@@ -85,6 +85,10 @@ h3 {
     background-color: rgba(94, 218, 218, 0.25);
 }
 
+#clearentry:hover {
+    background-color: rgba(94, 218, 218, 0.5);
+}
+
 button {
     background-color: rgba(94, 218, 218, 0.75);
     border: 2px solid rgba(0, 128, 128, 0.5);
@@ -93,6 +97,10 @@ button {
     font-size: medium;
     margin: 2px;
 }
+button:hover {
+    background-color: rgba(94, 218, 218, 1.0);
+}
+
 
 .passwordDisplay {
     background-color: white;
@@ -110,6 +118,11 @@ button {
 .NotYetAllocatedFromCMI {
     background-color: #fff;
 }
+
+/* 
+# is for an id or a one-time use only item! yep
+"." is for a class used over and over again, sometimes even just once, whichever
+*/
 
 /* From CMI Website */
 
