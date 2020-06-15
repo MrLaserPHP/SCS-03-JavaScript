@@ -1,48 +1,97 @@
 body {
-    background-color: turquoise;
+    /* background-color: white; */
     background-image: url(https://codingmetrology.com/wp-content/uploads/2019/03/2017-08-25-CropShrink.jpg);
+    margin: 0;
     background-position: top center;
     background-size: cover;
-}
-h1 {
-    background-color: lightgray;
-    color: darkslategray;
-    font-size: 30px;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
-}
-
-h2 {
-    color: darkslategray;
-    font-size: 20px;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
     background-color: rgba(128, 128, 128, 0.75) ;
     padding: 2rem;
     border-radius: 1rem;
-    border: 25px solid teal ;
+    border: 10px solid teal ;
     border-width: thick;
+    /* height: 2rem; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* font-size: large; */
+}
+
+.title {
+    /* EXAMPLE CODE */
+    background:  rgba(0, 128, 128, 1.0);    
+    color: #32373c;
+    padding: 10px;
+    border-bottom: 4px grey solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    border-radius: .5rem;
+}
+
+h1 {
+    /* background-color: lightgray; */
+    color: #32373c;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: black;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3 {
+    color: #32373c;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+.GeneratePasswordTitle {
+    display: flex;
+    flex: row 1;
 }
 
 .form {
     display: grid;
     grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+}
 
+.buttongroup {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: 2;
+}
 
+#clearentry {
+    background-color: rgba(94, 218, 218, 0.25);
 }
 
 button {
     background-color: rgba(94, 218, 218, 0.75);
-    border: 1px solid rgba(0, 128, 128, 0.5);
+    border: 2px solid rgba(0, 128, 128, 0.5);
     border-radius: 1rem;
     grid-column: span 2;
-
+    font-size: medium;
+    margin: 2px;
 }
 
 .passwordDisplay {
@@ -51,7 +100,196 @@ button {
     border: 1px solid teal;
     height: 2rem;
     width: 350px;
+    min-width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: large;
 }
+
+.NotYetAllocatedFromCMI {
+    background-color: #fff;
+}
+
+/* From CMI Website */
+
+/* CMI-Website colors:
+
+color:#fff;
+background-color:#32373c;
+font-size:18px;margin:0;padding:12px 24px;
+color:#32373c;
+border:1px solid #e2e4e7;
+background:#edeff0;
+color:#00739c;
+color:#40464d;
+color:#f8f9f9;
+*/
+
+/* .wp-block-audio figcaption{margin-top:.5em;margin-bottom:1em}
+.wp-block-button{color:#fff}
+.wp-block-button__link{background-color:#32373c;border:none;border-radius:28px;box-shadow:none;color:inherit;cursor:pointer;display:inline-block;font-size:18px;margin:0;padding:12px 24px;text-align:center;text-decoration:none;overflow-wrap:break-word}
+
+.is-style-outline{color:#32373c}.is-style-outline 
+.wp-block-button__link{background-color:transparent;border:2px solid}
+.wp-block-calendar{text-align:center}
+
+.wp-block-calendar th{padding:4px;border:1px solid #e2e4e7}
+.wp-block-calendar tfoot td{border:none}
+.wp-block-calendar table{width:100%;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}
+.wp-block-calendar table th{font-weight:400;background:#edeff0}
+.wp-block-calendar a{text-decoration:underline}
+.wp-block-calendar tfoot a{color:#00739c}
+.wp-block-calendar table caption,
+.wp-block-calendar table tbody{color:#40464d}
+
+f8f9f9
+
+.wp-block-categories.alignleft{margin-right:2em}
+.wp-block-categories.alignright{margin-left:2em}
+.wp-block-columns{display:flex;margin-bottom:28px;flex-wrap:wrap}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap}}
+.wp-block-column{flex-grow:1;min-width:0;word-break:break-word;overflow-wrap:break-word}@media (max-width:599px){.wp-block-column{flex-basis:100%!important}}@media (min-width:600px){.wp-block-column{flex-basis:calc(50% - 16px);flex-grow:0}
+.wp-block-column:nth-child(2n){margin-left:32px}}@media (min-width:782px){.wp-block-column:not(:first-child){margin-left:32px}}
+.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}
+.wp-block-columns.are-vertically-aligned-center{align-items:center}
+.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}
+.wp-block-column.is-vertically-aligned-top{align-self:flex-start}
+.wp-block-column.is-vertically-aligned-center{-ms-grid-row-align:center;align-self:center}
+.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-cover,
+.wp-block-cover-image{position:relative;background-color:#000;background-size:cover;background-position:50%;min-height:430px;height:100%;width:100%;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.wp-block-cover-image.has-parallax,
+.wp-block-cover.has-parallax{background-attachment:fixed}@supports (-webkit-overflow-scrolling:touch){.wp-block-cover-image.has-parallax,
+.wp-block-cover.has-parallax{background-attachment:scroll}}@media (prefers-reduced-motion:reduce){.wp-block-cover-image.has-parallax,
+.wp-block-cover.has-parallax{background-attachment:scroll}}
+.wp-block-cover-image.has-background-dim:before,
+.wp-block-cover.has-background-dim:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;background-color:inherit;opacity:.5;z-index:1}
+.wp-block-cover-image.has-background-dim.has-background-dim-10:before,
+.wp-block-cover.has-background-dim.has-background-dim-10:before{opacity:.1}
+.wp-block-cover-image.has-background-dim.has-background-dim-20:before,
+.wp-block-cover.has-background-dim.has-background-dim-20:before{opacity:.2}
+.wp-block-cover-image.has-background-dim.has-background-dim-30:before,
+.wp-block-cover.has-background-dim.has-background-dim-30:before{opacity:.3}
+.wp-block-cover-image.has-background-dim.has-background-dim-40:before,
+.wp-block-cover.has-background-dim.has-background-dim-40:before{opacity:.4}
+.wp-block-cover-image.has-background-dim.has-background-dim-50:before,
+.wp-block-cover.has-background-dim.has-background-dim-50:before{opacity:.5}
+.wp-block-cover-image.has-background-dim.has-background-dim-60:before,
+.wp-block-cover.has-background-dim.has-background-dim-60:before{opacity:.6}
+.wp-block-cover-image.has-background-dim.has-background-dim-70:before,
+.wp-block-cover.has-background-dim.has-background-dim-70:before{opacity:.7}
+.wp-block-cover-image.has-background-dim.has-background-dim-80:before,
+.wp-block-cover.has-background-dim.has-background-dim-80:before{opacity:.8}
+.wp-block-cover-image.has-background-dim.has-background-dim-90:before,
+.wp-block-cover.has-background-dim.has-background-dim-90:before{opacity:.9}
+.wp-block-cover-image.has-background-dim.has-background-dim-100:before,
+.wp-block-cover.has-background-dim.has-background-dim-100:before{opacity:1}
+
+.wp-block-cover.alignright{max-width:305px;width:100%}
+.wp-block-cover:after{display:block;content:"";font-size:0;min-height:inherit}@supports (position:sticky){.wp-block-cover-image:after,
+.wp-block-cover__inner-container{width:calc(100% - 70px);z-index:1;color:#f8f9f9}
+
+.wp-block-cover__video-background{position:absolute;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);width:100%;height:100%;z-index:0;-o-object-fit:cover;object-fit:cover}
+
+.wp-block-cover-image h2{color:#fff}
+
+.wp-block-cover-image h2 a:hover{color:#fff}
+
+.wp-block-cover.has-left-content{justify-content:flex-start}
+
+.wp-block-cover.has-right-content{justify-content:flex-end}
+
+.wp-block-cover-image.has-left-content>h2{margin-left:0;text-align:left}
+
+.wp-block-cover-image.has-right-content>h2{margin-right:0;text-align:right}
+
+.wp-block-cover-image>h2{font-size:2em;line-height:1.25;z-index:1;margin-bottom:0;max-width:610px;padding:14px;text-align:center}
+.block-editor-block-list__block[data-type="core/embed"][data-align=left] 
+.block-editor-block-list__block-edit,.block-editor-block-list__block[data-type="core/embed"][data-align=right] 
+.block-editor-block-list__block-edit,.wp-block-embed.alignleft,
+
+.wp-block-embed.alignright{max-width:360px;width:100%}
+.wp-block-embed{margin-bottom:1em}.wp-block-embed figcaption{margin-top:.5em;margin-bottom:1em}
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-1-1 
+.wp-block-embed__wrapper,.wp-embed-responsive 
+
+.wp-block-embed__wrapper:before{content:"";display:block;padding-top:50%}
+
+.wp-embed-aspect-21-9 
+.wp-block-embed__wrapper iframe{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%}
+
+.wp-block-embed.wp-embed-aspect-21-9 
+.wp-block-embed__wrapper:before{padding-top:42.85%}
+
+.wp-embed-aspect-18-9 
+.wp-block-embed__wrapper:before{padding-top:50%}
+.wp-block-embed.wp-embed-aspect-16-9 
+.wp-block-embed__wrapper:before{padding-top:56.25%}
+.wp-block-embed.wp-embed-aspect-4-3 
+.wp-block-embed__wrapper:before{padding-top:75%}
+.wp-block-embed.wp-embed-aspect-1-1 
+.wp-block-embed__wrapper:before{padding-top:100%}
+
+.wp-embed-aspect-9-16 
+.wp-block-embed__wrapper:before{padding-top:177.78%}
+
+.wp-block-embed__wrapper:before{padding-top:200%}
+.wp-block-file{margin-bottom:1.5em}
+.wp-block-file.aligncenter{text-align:center}
+.wp-block-file.alignright{text-align:right}
+
+.wp-block-file__button{
+    background:#32373c;
+    border-radius:2em;
+    color:#fff;
+    font-size:13px;
+    padding:.5em 1em
+}
+
+.wp-block-file__button{text-decoration:none}
+.wp-block-file a.wp-block-file__button:active,
+
+.wp-block-file__button:focus,
+
+.wp-block-file__button:hover,
+
+.wp-block-file__button:visited{
+    box-shadow:none;
+    color:#fff;
+    opacity:.85;
+    text-decoration:none
+}
+
+.wp-block-file__button{margin-left:.75em}.blocks-gallery-grid,
+
+.wp-block-gallery{display:flex;flex-wrap:wrap;list-style-type:none;padding:0;margin:0}
+
+.blocks-gallery-item{margin:0 16px 16px 0;display:flex;flex-grow:1;flex-direction:column;justify-content:center;position:relative}
+
+.blocks-gallery-item figure{margin:0;height:100%}@supports (position:sticky){.blocks-gallery-grid .blocks-gallery-image figure,.blocks-gallery-grid .blocks-gallery-item figure,.wp-block-gallery .blocks-gallery-image figure,.wp-block-gallery .blocks-gallery-item figure{display:flex;align-items:flex-end;justify-content:flex-start}}
+
+.blocks-gallery-item img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    width:100%
+}
+
+.blocks-gallery-item figcaption{
+    position:absolute;
+    bottom:0;width:100%;
+    max-height:100%;
+    overflow:auto;
+    padding:40px 10px 9px;
+    color:#fff;
+    text-align:center;
+    font-size:13px;
+    background:linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 70%,transparent)
+}
+
+.blocks-gallery-item figcaption img{display:inline}
+.blocks-gallery-item img{width:100%}@supports (position:sticky){.blocks-gallery-grid.is-cropped .blocks-gallery-image a,.blocks-gallery-grid.is-cropped .blocks-gallery-image img,.blocks-gallery-grid.is-cropped .blocks-gallery-item a,.blocks-gallery-grid.is-cropped .blocks-gallery-item img,.wp-block-gallery.is-cropped .blocks-gallery-image a,.wp-block-gallery.is-cropped .blocks-gallery-image img,.wp-block-gallery.is-cropped .blocks-gallery-item a,.wp-block-gallery.is-cropped .blocks-gallery-item img{height:100%;flex:1;-o-object-fit:cover;object-fit:cover}}.blocks-gallery-grid .blocks-gallery-image,.blocks-gallery-grid .blocks-gallery-item,.wp-block-gallery .blocks-gallery-image,.wp-block-gallery 
+.blocks-gallery-item{width:calc((100% - 16px)/2)}
+.blocks-gallery-grid .blocks-gallery-image:nth-of-type(2n),
+.blocks-gallery-grid .blocks-gallery-item:nth-of-type(2n),.wp-block-gallery 
+...
+*/

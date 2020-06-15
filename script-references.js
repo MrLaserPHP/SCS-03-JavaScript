@@ -103,3 +103,46 @@
 // document.body.innerHTML = "This is some text";
 // alert(alphabet)
 // alert(Math.random())
+
+ 
+/* <div>
+  <h2>Date/Time generator for fun</h2>
+  <button type="button" class="btn btn-info"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+  <p id="demo"></p>
+</div> */
+
+
+
+// Declaring variables here
+// ****Is there a way to decalre a set of common characters without defining each and every one?
+// var alphabet = alphabet
+// var numbers = numbers 
+// var specialcharacters = specialcharacters
+
+// var charCodesASCII = string.charCodesASCII
+// var alphabet = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+// var alphabetlow = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+// var alphabetup = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+// var numbers = [0,1,2,3,4,5,6,7,8,9];
+// Need to update the special characters variable list to either utilise unicode or escape sequences in order to have all special characters utilised
+// var specialcharacters = [!#%&()*+,-./:;<=>?@[\]^{|}~];
+// var uppercase = "A";
+// OR   
+// var alphanumerics = 'abcdef123456!@#$%^';
+// var alphanumerics = 'abcdef123456!@#$%^' .split
+
+// var characterAmountRange = 32
+
+// var poorpasword1 = alphabetlow + numbers;
+// var poorpasword2 = alphabetlow + alphabetup + numbers + alphanumerics;
+// var randomoption1 = (Math.floor((Math.random() * 3) + 1))
+// 
+// var generatedpassword = 
+
+// ********* This one below confuses me
+// var generate = document.querySelector('#generate')
+// var mytextareatest1 = document.querySelector('#password')
+// Variables declared
+

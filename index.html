@@ -6,58 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Password Generator</title>
-  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-      <h1>Tony's Password Generator</h1>
-  </header>
-  
-  <h2>Let's Generate a Password</h2>
+  <div class="container"> 
+    <h1 class="title">
+      Tony's Password Generator
+    </h1>
+    <h2 id="GeneratePasswordTitle">
+      Let's Generate a Password
+    </h2>
 
-  <br>
-
-  <div class="container">
-    <form class="form">
-      <div>
-        <textarea class="passwordDisplay"
-        readonly
-        id="password"
-        placeholder="Your Secure Password"
-        aria-label="Generated Password"
-        >
-        "Your generated password will show up here"
-        </textarea>
-
+    <form id="passwordGeneratorFrom" class="form">
+      <h3>Password will show here!</h3>
+      <div class="buttongroup">
         <button id="generate" class="btn btn-info">Generate Password</button>
         <button id="copy" class="btn btn-info">Copy to Clipboard</button>
-        <button id="clearentry" class="btn btn-info">Clear this entry</button>
-
+        <button id="clearentry" class="btn btn-info">Clear this entry</button>          
       </div>
-
-      
     </form>
+
+    </div>
   </div>
 
-  <script
-    src="script.js">
-  </script>
+<script
+  src="script.js">
+</script>
 
-  <script
-    src="script-references.js">
-  </script>
+<script
+  src="script-references.js">
+</script>
+
 </body>
 
 </html>
-
-
-
-<!-- 
-<div>
-  <h2>Date/Time generator for fun</h2>
-  <button type="button" class="btn btn-info"
-    onclick="document.getElementById('demo').innerHTML = Date()">
-    Click me to display Date and Time.</button>
-  <p id="demo"></p>
-</div> -->
