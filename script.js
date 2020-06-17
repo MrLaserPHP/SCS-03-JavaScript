@@ -1,9 +1,4 @@
 // Declaring variables here
-// var alphaUppercase = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(",")
-// var alphaLowercase = "abcdefghijklmnopqrstuvwxyz".split("");
-// var numbers = "0123456789".split("")
-// var symbols = "~,!,@,#,%,^,&,*,+,=".split(",")
-
 const characterAmountRange = document.getElementById('characterAmountRange')
 const characterAmountNumber = document.getElementById('characterAmountNumber')
 const includeUppercaseElement = document.getElementById('includeUppercase')
@@ -61,34 +56,8 @@ function arrayFromLowToHigh(low, high) {
     return array
 }
 
-
 function syncCharacterAmount(e) {
     const value = e.target.value
     characterAmountRange.value = value
     characterAmountNumber.value = value
 }
-
-
-// console trial
-// console.log("generatedpassword:");
-// console.log(generatedpassword);
-// console.log("randomoption1");
-// console.log(randomoption1);
-// console.log("Math.floor((Math.random() * 26) + 0):");
-// console.log(Math.floor((Math.random() * 26) + 0));
-// console.log("alphaLowercase");
-// console.log(alphaLowercase);
-// console.log("numbers");
-// console.log(numbers);
-
-// var charCodesASCII = (String.fromCharCode[1,2,3,4,5,6,7,8,9,10]); <---Couldn't get this function to work
-
-// form.addEventListener('generate', e => {
-//     e.preventDefault()
-//     const characterAmountRange = characterAmountRange.value
-//     const password = generatePassword(characterAmountRange, )
-// })
-
-// var symbols  could include more symbols ideally
-
-// return 'Array' and 'array' have very different result.
