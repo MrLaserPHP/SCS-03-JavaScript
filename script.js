@@ -1,22 +1,87 @@
 // Declaring variables here
-// var charCodesASCII = (String.fromCharCode[1,2,3,4,5,6,7,8,9,10]);
-var alphaLowercase = "abcdefghijklmnopqrstuvwxyz".split("");
-var alphaUppercase = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(",")
-var numbers = 'eleven!@#$#'
-var tonysObject1 = {
-    name: 'Tony'
+// var alphaUppercase = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(",")
+// var alphaLowercase = "abcdefghijklmnopqrstuvwxyz".split("");
+// var numbers = "0123456789".split("")
+// var symbols = "~,!,@,#,%,^,&,*,+,=".split(",")
+
+const characterAmountRange = document.getElementById('characterAmountRange')
+const characterAmountNumber = document.getElementById('characterAmountNumber')
+const includeUppercaseElement = document.getElementById('includeUppercase')
+const includeLowercaseElement = document.getElementById('includeLowercase')
+const includeNumbersElement = document.getElementById('includeNumbers')
+const includeSymbolsElement = document.getElementById('includeSymbols')
+
+const form = document.getElementById('passwordGeneratorForm')
+const passwordDisplay = document.getElementById('passwordDisplay')
+
+const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
+const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
+const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
+const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
+    arrayFromLowToHigh(58, 64)
+).concat(
+    arrayFromLowToHigh(91, 96)
+).concat(arrayFromLowToHigh(123, 126)
+)
+
+characterAmountRange.addEventListener('input', syncCharacterAmount)
+characterAmountNumber.addEventListener('input', syncCharacterAmount)
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    const characterAmount = characterAmountNumber.value
+    const includeUppercase = includeUppercaseElement.checked
+    const includeLowercase = includeLowercaseElement.checked
+    const includeNumbers = includeNumbersElement.checked
+    const includeSymbols = includeSymbolsElement.checked
+    const password = generatePassword(characterAmount, includeUppercase, includeLowercase, includeNumbers, includeSymbols)
+    passwordDisplay.innerText = password
+})
+
+function generatePassword(characterAmount, includeUppercase, includeLowercase,
+includeNumbers, includeSymbols) {
+    let charCodes = LOWERCASE_CHAR_CODES
+    if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
+    if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
+    if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
+    
+    const passwordCharacters = []
+    for (let i = 0; i < characterAmount; i++) {
+        const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+        passwordCharacters.push(String.fromCharCode(characterCode))
+    }
+    return passwordCharacters.join('')
 }
 
-// Square brackets [] mean array, {} is an object
-// # is......
-var characterAmountRange = 32;
-var randomoption1 = (Math.floor((Math.random() * 3) + 1));
-var generatedpassword = "12345654321qwerty";
-var generate = document.querySelector('#generate');
-var mytextareatest1 = document.querySelector('#password');
-// Variables declared
+function arrayFromLowToHigh(low, high) {
+    const array = []
+    for (let i = low; i <= high; i++) {
+        array.push(i)
+    }
+    return array
+}
 
-const form = document.getElementById('passworpasswordGeneratorForm')
+
+function syncCharacterAmount(e) {
+    const value = e.target.value
+    characterAmountRange.value = value
+    characterAmountNumber.value = value
+}
+
+
+// console trial
+// console.log("generatedpassword:");
+// console.log(generatedpassword);
+// console.log("randomoption1");
+// console.log(randomoption1);
+// console.log("Math.floor((Math.random() * 26) + 0):");
+// console.log(Math.floor((Math.random() * 26) + 0));
+// console.log("alphaLowercase");
+// console.log(alphaLowercase);
+// console.log("numbers");
+// console.log(numbers);
+
+// var charCodesASCII = (String.fromCharCode[1,2,3,4,5,6,7,8,9,10]); <---Couldn't get this function to work
 
 // form.addEventListener('generate', e => {
 //     e.preventDefault()
@@ -24,46 +89,6 @@ const form = document.getElementById('passworpasswordGeneratorForm')
 //     const password = generatePassword(characterAmountRange, )
 // })
 
-// Event listers...
-generate.addEventListener("click", function (event) 
-    {
-    event.preventDefault();
-    console.log('ACTIVATED Generate Button! Woohoo.');
-    generatedpassword = "i'm changing this value to nullllllllllllll";
-})
+// var symbols  could include more symbols ideally
 
-// console trial
-console.log("Tony's Console Trial Log like an ECHO Starts here for testing only!. Here we go!")
-// console.log("var charCodesASCII:");
-// console.log(charCodesASCII);
-console.log("generatedpassword:");
-console.log(generatedpassword);
-console.log("randomoption1");
-console.log(randomoption1);
-console.log("Math.floor((Math.random() * 10) + 0):");
-console.log(Math.floor((Math.random() * 10) + 0));
-console.log("Math.floor((Math.random() * 26) + 0):");
-console.log(Math.floor((Math.random() * 26) + 0));
-console.log("Math.floor((Math.random() * 4) + 0):");
-console.log(Math.floor((Math.random() * 4) + 0));
-
-console.log("alphaLowercase");
-console.log(alphaLowercase);
-
-// console.log("charCodesASCII:");
-// console.log(charCodesASCII);
-
-// document.write("Example written text to html")
-
-// items/text/etc. in curly braces {} are objects!
-var myobject = {
-    name: "Tony Facciolo",
-    hobby: "Coding...have no life otherwise"
-}
-
-// Great Youtube reference is: https://www.youtube.com/watch?v=iKo9pDKKHnc&list=WL&index=12&t=0s
-// right-click 'format document'...finally tfound it, thanks Luis
-//THIS ...'.value' is...
-//whatever comes after a '.' dot is an element. 
-//After parentheses are attributes. 
-// generatedpassword.value
+// return 'Array' and 'array' have very different result.

@@ -69,3 +69,26 @@ function to_a(c1 = 'a', c2 = 'z') {
     a = 'abcdefghijklmnopqrstuvwxyz'.split('');
     return (a.slice(a.indexOf(c1), a.indexOf(c2) + 1)); 
 }
+
+
+
+// var tonysObject1 = {
+//     name: 'Tony'
+// }
+
+// items/text/etc. in curly braces {} are objects!
+// var myobject = {
+//     name: "Tony Facciolo",
+//     hobby: "Coding...have no life otherwise"
+// }
+
+// document.write("Example written text to html")
+
+// Great Youtube reference is: https://www.youtube.com/watch?v=iKo9pDKKHnc&list=WL&index=12&t=0s
+// right-click 'format document'...finally tfound it, thanks Luis
+//THIS ...'.value' is...
+//whatever comes after a '.' dot is an element. 
+//After parentheses are attributes. 
+// generatedpassword.value
+// Square brackets [] mean array, {} is an object
+// # is......
